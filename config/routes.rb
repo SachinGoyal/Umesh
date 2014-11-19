@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :buyers
+
+  resources :suppliers
+
   get 'home/index'
 
   devise_for :users
