@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141119070723) do
+ActiveRecord::Schema.define(version: 20141119091353) do
+
+  create_table "buyer_bank_details", force: true do |t|
+    t.string   "bank_name"
+    t.text     "bank_address"
+    t.string   "ifsc_code"
+    t.text     "note"
+    t.integer  "buyer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "buyers", force: true do |t|
     t.string   "name"
@@ -24,6 +34,16 @@ ActiveRecord::Schema.define(version: 20141119070723) do
     t.string   "telephone_no"
     t.string   "mobile_number"
     t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "supplier_bank_details", force: true do |t|
+    t.string   "bank_name"
+    t.text     "bank_address"
+    t.string   "ifsc_code"
+    t.text     "note"
+    t.integer  "supplier_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

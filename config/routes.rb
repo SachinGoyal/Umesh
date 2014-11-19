@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :buyer_bank_details
+
+  resources :supplier_bank_details
+
   resources :buyers
 
   resources :suppliers

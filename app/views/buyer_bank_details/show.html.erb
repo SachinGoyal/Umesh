@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bank name:</strong>
+  <%= @buyer_bank_detail.bank_name %>
+</p>
+
+<p>
+  <strong>Bank address:</strong>
+  <%= @buyer_bank_detail.bank_address %>
+</p>
+
+<p>
+  <strong>Ifsc code:</strong>
+  <%= @buyer_bank_detail.ifsc_code %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @buyer_bank_detail.note %>
+</p>
+
+<%#= render '_index' %>
+<%= link_to 'Edit', edit_buyer_bank_detail_path(@buyer_bank_detail) %> |
+<%= link_to 'Back', buyer_bank_details_path %>

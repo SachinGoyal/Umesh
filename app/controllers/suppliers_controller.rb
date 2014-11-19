@@ -9,6 +9,8 @@ class SuppliersController < ApplicationController
   end
 
   def show
+    @supplier = Supplier.find(params[:id])
+    @supplier_bank_details = @supplier.supplier_bank_details
     respond_with(@supplier)
   end
 
@@ -42,6 +44,6 @@ class SuppliersController < ApplicationController
     end
 
     def supplier_params
-      params.require(:supplier).permit(:name, :company_name, :address, :zip_code, :state, :country, :email, :telephone_no, :mobile_number, :comment)
+      params.require(:supplier).permit(:name, :company_name, :address, :zip_code, :state, :country, :email, :telephone_no, :mobile_number, :comment ,supplier_bank_account_attributes: [:id, :bank_name ,:bank_address,:ifsc_code,:ifsc_no,:note])
     end
 end

@@ -5,10 +5,13 @@ class BuyersController < ApplicationController
 
   def index
     @buyers = Buyer.all
+
     respond_with(@buyers)
   end
 
   def show
+    @buyer = Buyer.find(params[:id])
+    @buyer_bank_details = @buyer.buyer_bank_details
     respond_with(@buyer)
   end
 
