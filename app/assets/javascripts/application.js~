@@ -15,7 +15,6 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
-jQuery ->
   $('form').on 'click', '.remove_fields', (event) ->
     $(this).closest('.field').remove()
     event.preventDefault()
