@@ -4,8 +4,12 @@ class ItemsController < ApplicationController
   respond_to :html
 
   def index
-    @items = Item.all
-    respond_with(@items)
+    @search = Item.search(params[:q])
+    @items = @search.result
+    @search.build_condition if @search.conditions.empty?
+    @search.build_sort if @search.sorts.empty?
+    #@items = Item.all
+    #respond_with(@items)
   end
 
   def show

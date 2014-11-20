@@ -1,13 +1,21 @@
 Rails.application.routes.draw do
-  resources :items
+  #resources :items
+  resources :items do
+    collection { post :search, to: 'items#index' }
+  end
 
   resources :buyer_bank_details
 
   resources :supplier_bank_details
 
-  resources :buyers
+ # resources :buyers
+ resources :buyers do
+    collection { post :search, to: 'buyers#index' }
+ end
 
-  resources :suppliers
+  resources :suppliers do
+    collection { post :search, to: 'suppliers#index'}
+  end
 
   get 'home/index'
 

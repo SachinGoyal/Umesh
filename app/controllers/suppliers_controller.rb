@@ -4,8 +4,12 @@ class SuppliersController < ApplicationController
   respond_to :html
 
   def index
-    @suppliers = Supplier.all
-    respond_with(@suppliers)
+    @search = Supplier.search(params[:q])
+    @suppliers = @search.result
+    @search.build_condition if @search.conditions.empty?
+    @search.build_sort if @search.sorts.empty?
+    #@suppliers = Supplier.all
+    #respond_with(@suppliers)
   end
 
   def show

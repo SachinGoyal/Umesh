@@ -4,9 +4,12 @@ class BuyersController < ApplicationController
   respond_to :html
 
   def index
-    @buyers = Buyer.all
-
-    respond_with(@buyers)
+    @search = Buyer.search(params[:q])
+    @buyers = @search.result
+    @search.build_condition if @search.conditions.empty?
+    @search.build_sort if @search.sorts.empty?
+  #  @buyers = Buyer.all
+   # respond_with(@buyers)
   end
 
   def show

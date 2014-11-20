@@ -17,6 +17,7 @@ gem 'devise'
 gem 'execjs'
 gem 'cancancan'
 gem 'therubyracer'
+gem 'ransack'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
