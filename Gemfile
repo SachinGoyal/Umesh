@@ -11,6 +11,8 @@ group :production do
 	gem 'pg'
 	gem 'rails_12factor'
 end
+gem "rmagick"
+gem "carrierwave"
 gem 'devise'
 gem 'execjs'
 gem 'cancancan'
