@@ -19,6 +19,12 @@ gem 'cancancan'
 gem 'therubyracer'
 gem 'ransack'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+
+#bar code
+gem'barby'
+gem 'barby-chunky_png'
+gem 'png'
+gem 'RubyInline'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets

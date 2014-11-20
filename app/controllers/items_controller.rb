@@ -2,6 +2,8 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
+  require'barby'
+  'barby/outputter/png_outputter'
 
   def index
     @search = Item.search(params[:q])
